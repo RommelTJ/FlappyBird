@@ -21,7 +21,7 @@ class GameScene: SKScene {
         var replaceBg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
         var moveBgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replaceBg]))
 
-        
+        //Looping the Background
         for var i:CGFloat=0; i<3; i++ {
             bg = SKSpriteNode(texture: bgTexture)
             bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i, y: CGRectGetMidY(self.frame))
@@ -29,10 +29,7 @@ class GameScene: SKScene {
             self.addChild(bg)
             bg.runAction(moveBgForever)
             
-       }
-        
-        
-        
+        }
         
         //Set the bird textures.
         var birdTexture = SKTexture(imageNamed: "FlappyBirdImages/flappy1.png")
@@ -47,13 +44,27 @@ class GameScene: SKScene {
         bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
         bird.runAction(makeBirdFlap)
         
+        //Set physics
+        bird.physicsBody = SKPhysicsBody(circleOfRadius: bird.size.height/2)
+        bird.physicsBody?.dynamic = true
+        bird.physicsBody?.allowsRotation = false
+        
+        //Add the bird
         self.addChild(bird)
+        
+        //Define the ground.
+        var ground = SKNode()
+        ground.position = CGPointMake(0, 0)
+        ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, 1))
+        ground.physicsBody?.dynamic = false
+        self.addChild(ground)
         
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
-        
+        bird.physicsBody?.velocity = CGVectorMake(0, 0)
+        bird.physicsBody?.applyImpulse(CGVectorMake(0, 50))
     }
    
     override func update(currentTime: CFTimeInterval) {
