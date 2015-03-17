@@ -9,8 +9,24 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    var bird = SKSpriteNode()
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+        //Set the bird textures.
+        var birdTexture = SKTexture(imageNamed: "FlappyBirdImages/flappy1.png")
+        var birdTexture2 = SKTexture(imageNamed: "FlappyBirdImages/flappy2.png")
+        
+        //Set the flap animations.
+        var animation = SKAction.animateWithTextures([birdTexture, birdTexture2], timePerFrame: 0.1)
+        var makeBirdFlap = SKAction.repeatActionForever(animation)
+        
+        //Initialize the bird Sprite Node, set its position and animation.
+        bird = SKSpriteNode(texture: birdTexture)
+        bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
+        bird.runAction(makeBirdFlap)
+        
+        self.addChild(bird)
         
     }
     
