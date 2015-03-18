@@ -15,6 +15,7 @@
 		77B857FF1AB87D7000828D72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B857FE1AB87D7000828D72 /* Images.xcassets */; };
 		77B858021AB87D7000828D72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B858001AB87D7000828D72 /* LaunchScreen.xib */; };
 		77B8580E1AB87D7000828D72 /* FlappyBirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8580D1AB87D7000828D72 /* FlappyBirdTests.swift */; };
+		77B858181AB8812000828D72 /* FlappyBirdImages in Resources */ = {isa = PBXBuildFile; fileRef = 77B858171AB8812000828D72 /* FlappyBirdImages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		77B858071AB87D7000828D72 /* FlappyBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B8580C1AB87D7000828D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B8580D1AB87D7000828D72 /* FlappyBirdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyBirdTests.swift; sourceTree = "<group>"; };
+		77B858171AB8812000828D72 /* FlappyBirdImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FlappyBirdImages; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				77B857F31AB87D7000828D72 /* AppDelegate.swift */,
 				77B857F51AB87D7000828D72 /* GameScene.sks */,
 				77B857F71AB87D7000828D72 /* GameScene.swift */,
+				77B858171AB8812000828D72 /* FlappyBirdImages */,
 				77B857F91AB87D7000828D72 /* GameViewController.swift */,
 				77B857FB1AB87D7000828D72 /* Main.storyboard */,
 				77B857FE1AB87D7000828D72 /* Images.xcassets */,
@@ -202,6 +205,7 @@
 				77B857FF1AB87D7000828D72 /* Images.xcassets in Resources */,
 				77B857F61AB87D7000828D72 /* GameScene.sks in Resources */,
 				77B857FD1AB87D7000828D72 /* Main.storyboard in Resources */,
+				77B858181AB8812000828D72 /* FlappyBirdImages in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
